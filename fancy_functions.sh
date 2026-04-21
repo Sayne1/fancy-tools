@@ -1,21 +1,18 @@
-#!/bin/bash
-
 gco() {
+    # Check if inside git repo
     if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-        echo "Error no Git repository."
+        echo "Error: Not a git repository"
         return 1
     fi
 
-
-    local branch_name=$(git branch --show-current)
-
-
+    # Check if message provided
     if [ -z "$1" ]; then
-        echo "Usage: gco \"commit message\""
+        echo "Usage: gco 'your commit message'"
         return 1
     fi
 
-    # Format
-    local full_message="[$branch_name] $1"
-    git commit -m "$full_message"
+    # Get current branch
+    local branch=$(git branch --show-current)
+    git commit -m "[$branch] $1"
 }
+
