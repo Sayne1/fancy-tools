@@ -213,7 +213,7 @@ updateFancyTools
 You can install everything with one command:
 
 ```bash
-git clone https://github.com/<your-username>/fancy_tools.git ~/src/fancy_tools && cd ~/src/fancy_tools && chmod +x install.sh && ./install.sh && source ~/.bashrc
+git clone https://github.com/Sayne1/fancy_tools.git ~/src/fancy_tools && cd ~/src/fancy_tools && chmod +x install.sh && ./install.sh && source ~/.bashrc
 ```
 
 ---
